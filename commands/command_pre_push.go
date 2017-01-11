@@ -104,7 +104,7 @@ func prePushCommand(cmd *cobra.Command, args []string) {
 		}
 
 		if len(lockConflicts) > 0 {
-			Error("Some files are locked in %s...%s", left, cfg.CurrentRemote)
+			Error("You cannot push changes because someone else has locked:")
 			for _, file := range lockConflicts {
 				Error("* %s", file)
 			}
