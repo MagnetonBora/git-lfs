@@ -391,7 +391,7 @@ func buildProgressMeter(dryRun bool) *progress.ProgressMeter {
 func findLocks(lc *locking.Client, filter map[string]string, limit int, localOnly bool) (map[string]locking.Lock, error) {
 	locks, err := lc.SearchLocks(filter, limit, localOnly)
 	if err != nil {
-		return nil, errors.Wrap(err, "error finding locks")
+		return nil, errors.Wrap(err, "finding locks")
 	}
 
 	idx := make(map[string]locking.Lock, len(locks))
