@@ -118,7 +118,7 @@ func prePushCommand(cmd *cobra.Command, args []string) {
 	}
 
 	if len(myLocks) > 0 {
-		Print("Pushing your locked files:")
+		Print("Consider unlocking your currently locked files:")
 		for _, file := range myLocks {
 			Print("* %s", file)
 		}
